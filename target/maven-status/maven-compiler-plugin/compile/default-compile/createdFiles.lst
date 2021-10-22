@@ -1,6 +1,8 @@
 utility\Log.class
 config\ActionKeywords.class
+pages\Page.class
 appModules\FlightSearch.class
 utility\ExcelUtils.class
 appModules\FlightCheckout.class
+config\Constants.class
 pages\Pages.class
