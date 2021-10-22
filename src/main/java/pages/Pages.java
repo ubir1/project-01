@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 
 import utility.Log;
 
-public class Pages {
+public class Pages implements Page{
 	
 	WebDriver driver;
-	By menu_more = By.cssSelector("0#lithium-root > main > div.crvbs > div.bOoyS.Gi._T.cUjdV > div > div > div:nth-child(17) > div > button");
+	By menu_more = By.cssSelector("#lithium-root > main > div.crvbs > div.bOoyS.Gi._T.cUjdV > div > div > div:nth-child(17) > div > button");
 	By more_flight = By.cssSelector("#menu-item-3 > div > span");
 	By flight_page_from = By.cssSelector("#component_7 > div > div.ucguE.M-.P6 > div > div > div > div.cViCf > div > div.cPuYE.IQrwn > div > div:nth-child(1) > div > div > div > input");
 	By flight_page_to = By.cssSelector("#component_7 > div > div.ucguE.M-.P6 > div > div > div > div.cViCf > div > div.cPuYE.IQrwn > div > div:nth-child(2) > div > div > div > input");

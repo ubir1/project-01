@@ -18,7 +18,7 @@ import appModules.*;
 import config.ActionKeywords;
 import config.Constants;
 
-public class TestCases {
+class TestCases extends TestCase{
 	
 	public static ActionKeywords actionKeywords;
 	public static String dActionKeyword;
@@ -31,10 +31,10 @@ public class TestCases {
 	
 	//@Test //if flight checkout is working
 	public void flightCheckout() throws Exception{
-		DOMConfigurator.configure(Constants.Log_Conf_File_Name);
+		
 		//Log.
 		Log.startTestCase(Constants.Testcase_Name_1);
-		ExcelUtils.setExcelFile(Constants.Excel_File_Path, Constants.Excel_File_Sheet_Name);
+		
 		actionKeywords = new ActionKeywords();
 		method = actionKeywords.getClass().getMethods();
 		//System.out.println(method.length);
@@ -74,7 +74,12 @@ public class TestCases {
 		Log.endTestCase(Constants.Testcase_Name_3);
 	}
 	
-	public static void main(String args[]) {
+	private TestCases() throws Exception{
+		super();
+	}
+	
+	public static void main(String args[]) throws Exception {
+		
 		TestCases test = new TestCases();
 		try{
 			test.flightCheckout();
